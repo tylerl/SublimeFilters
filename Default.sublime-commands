@@ -58,11 +58,11 @@
     }
   },
   {
-    "caption":"Unpack Zlib",
+    "caption":"Unpack GZip",
     "command":"zlib_pack",
     "args":{
       "unpack":true,
-      "flavor":"zlib"
+      "flavor":"gzip"
     }
   }
 ]

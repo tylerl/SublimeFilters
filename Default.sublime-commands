@@ -1,0 +1,68 @@
+[
+  {
+    "caption":"Pretty Print JSON",
+    "command":"json_prettyprint"
+  },
+  {
+    "caption":"Delete Blank Lines",
+    "command":"delete_blank_lines"
+  },
+  {
+    "caption":"Join Lines as List",
+    "command":"lines_to_list"
+  },
+  {
+    "caption":"Parse URL",
+    "command":"url_parse"
+  },
+  {
+    "caption":"UnParse URL",
+    "command":"url_unparse"
+  },
+  {
+    "caption":"Lines To List",
+    "command":"lines_to_list"
+  },
+  {
+    "caption":"Strip all spaces",
+    "command":"filter_pipes_regex",
+    "args":{
+      "regex":"\\s+",
+      "replacement":""
+    }
+  },
+  {
+    "caption":"Pack DEFLATE",
+    "command":"zlib_pack",
+    "args":{
+      "unpack":false,
+      "wrap":0,
+      "flavor":"deflate"
+    }
+  },
+  {
+    "caption":"Unpack DEFLATE",
+    "command":"zlib_pack",
+    "args":{
+      "unpack":true,
+      "flavor":"deflate"
+    }
+  },
+  {
+    "caption":"Pack GZip",
+    "command":"zlib_pack",
+    "args":{
+      "unpack":false,
+      "wrap":64,
+      "flavor":"gzip"
+    }
+  },
+  {
+    "caption":"Unpack Zlib",
+    "command":"zlib_pack",
+    "args":{
+      "unpack":true,
+      "flavor":"zlib"
+    }
+  }
+]

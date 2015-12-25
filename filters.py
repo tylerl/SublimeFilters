@@ -77,6 +77,7 @@ class ZlibPackCommand(filterpipes.FilterPipesCommandBase):
     wrap = 64
     urlsafe = False
     compresslevel = 9
+    encoding='utf-8'
     WBITS = {
         'deflate': -zlib.MAX_WBITS,
         'zlib': zlib.MAX_WBITS,
@@ -87,15 +88,15 @@ class ZlibPackCommand(filterpipes.FilterPipesCommandBase):
     def filter(self, text):
         text = text.encode('utf-8')
         if self.unpack:
-            return self._decompress(self._decode(text)).decode('utf-8')
-        return self._encode(self._compress(text)).decode('utf-8')
+            return self._decompress(self._decode(text)).decode(self.encoding)
+        return self._encode(self._compress(text))
 
     def _encode(self, data):
         if self.urlsafe:
             encoded = base64.urlsafe_b64encode(data)
         else:
             encoded = base64.b64encode(data)
-        encoded = encoded.decode('utf-8')
+        encoded = encoded.decode(self.encoding)
         if self.wrap:
             return '\n'.join(
                 (encoded[i:i + self.wrap] for i in

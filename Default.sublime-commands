@@ -64,5 +64,23 @@
       "unpack":true,
       "flavor":"zlib"
     }
+  },
+  {
+    "caption":"Websafe base64 decode",
+    "command":"base64_websafe",
+    "args":{
+      "decode":true
+    }
+  },
+  {
+    "caption":"Websafe base64 encode",
+    "command":"base64_websafe",
+    "args":{
+      "decode":false
+    }
+  },
+  {
+    "caption":"Assign Proto IDs",
+    "command":"proto_assign_ids",
   }
 ]
